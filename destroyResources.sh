@@ -1,5 +1,6 @@
 #!/bin/bash
 clusterId=($(jq -r '.ClusterId' cluster.json))
+echo "terminating the cluster ${clusterId}"
 aws emr terminate-clusters --cluster-ids $clusterId
 
 #remove the cluster json file
