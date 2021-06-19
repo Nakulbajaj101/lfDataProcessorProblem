@@ -40,7 +40,7 @@ clusterDns=$( jq -r '.Cluster.MasterPublicDnsName' <<< "${clusterContent}" )
 echo "clusterDns is ${clusterDns}"
 
 #copying the etl.py file to cluster
-scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/$keyName.pem sparkProcessor.py hadoop@$clusterDns:/home/hadoop/ 
+scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/$keyName.pem sparkDataProcessor.py hadoop@$clusterDns:/home/hadoop/ 
 
 #executing the sparkSubmit script over ssh
 ssh  -o StrictHostKeyChecking=no -i ~/$keyName.pem hadoop@$clusterDns  'bash -s' < sparkSubmit.sh
