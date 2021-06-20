@@ -30,7 +30,7 @@ def annonymise_data(input_filepath="./data.csv", output_filepath="./output.csv",
 
 if __name__ == "__main__":
     fake = Faker(['it_IT', 'en_US', 'ja_JP'])
-    num_records = 10000 #creating 1 million records
+    num_records = 1000000 #creating 1 million records
     first_name_column = "first_name"
     last_name_column = "last_name"
     address_column = "address"
