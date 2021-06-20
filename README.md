@@ -48,7 +48,7 @@ The section covers tools used to enable the project.
    .Pass the cluster name as first choice of argument and name of the key associated with ec2 instance
 
     ```bash 
-    runSparkEmrCluster.sh <cluster_name> <keyName>
+    bash runSparkEmrCluster.sh <cluster_name> <keyName>
     ```
 
 
